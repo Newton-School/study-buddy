@@ -1,10 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { AComponent } from "@/components/AComponent";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
+      <main className={`${styles.main} light`}>
         <Image
           className={styles.logo}
           src="/next.svg"
@@ -13,9 +14,12 @@ export default function Home() {
           height={38}
           priority
         />
+
+        <AComponent />
+
         <ol>
           <li>
-            Get started by editing <code>app/page.js</code>.
+            Get started by editing <code>src/app/page.js</code>.
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>

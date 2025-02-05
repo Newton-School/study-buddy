@@ -1,5 +1,5 @@
 {
-  "name": "study-buddy",
+  "name": "nextjs-app-router",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,13 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@newtonschool/grauity": "^2.0.1",
+    "next": "15.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.6"
+    "styled-components": "^6.1.14"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "eslint": "^9",
-    "eslint-config-next": "15.1.6",
-    "@eslint/eslintrc": "^3"
+    "eslint-config-next": "15.1.5"
   }
 }
