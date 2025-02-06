@@ -1,0 +1,1 @@
+import { BG_IMAGE_LINK } from "./constants";
