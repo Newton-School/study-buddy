@@ -18,7 +18,7 @@ import {
 } from "./HeroLeft.styled";
 import Carousel from "./Carousel/Carousel";
 import StyledStartSolvingButton from "./StartSolvingButton/StartSolvingButton";
-import NumberIncrement from "@/components/NoIncrement/NumberIncrement";
+import NumberIncrement from "@/components/NumberIncrement/NumberIncrement";
 
 export default function HeroLeft() {
   return (

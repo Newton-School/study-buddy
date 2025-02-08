@@ -3,16 +3,16 @@ import styled from "styled-components";
 
 export const StyledNumberIncrementWrapper = styled.div`
   display: flex;
-  font-family: var(--font-geist-mono);
-  font-size: 48px;
+  font-family: var(--font-Mona-Sans);
+  font-size: 42px;
   font-weight: bold;
-  color: var(--foreground);
+  display: inline-flex;
 `;
 
 export const StyledDigitColumn = styled.div`
   position: relative;
-  width: 1em;
-  height: 1.2em;
+  width: 0.65em;
+  height: 0.8em;
   overflow: hidden;
 `;
 
