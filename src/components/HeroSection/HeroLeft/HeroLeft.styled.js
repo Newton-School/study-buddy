@@ -13,7 +13,7 @@ export const StyledHeroLeft = styled.div`
   flex-direction: column;
   width: 45%;
   height: 100vh;
-  padding: 2vh 0 0 3vh;
+  padding: 2vh 0 0 7vh;
   gap: 3vh;
 
   @media (max-width: 768px) {
