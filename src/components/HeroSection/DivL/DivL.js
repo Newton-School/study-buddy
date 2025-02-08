@@ -1,6 +1,6 @@
 import {
   StyledCompareDiv,
-  StyledCompareSpac,
+  StyledCompareSpan,
   StyledHeroText,
 } from "./DivL.styled";
 import { StyledCollabDiv } from "./DivL.styled";
