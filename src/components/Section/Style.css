@@ -1,0 +1,44 @@
+.no-display{
+    display: none;
+    display: hidden;
+}
+.centered{
+    display: flex;
+    justify-content: center;
+}
+
+.desktop-logo {
+    display: block;
+    padding-top: 0.81vh;
+  }
+  .mobile-logo {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .desktop-logo {
+      display: none;
+    }
+    .mobile-logo {
+      display: block;
+      padding-top: 0.81vh;
+    }
+  }
+
+.Space{
+    margin-bottom: 5.57vh;
+}
+
+.Fontstyling{
+    font:Mono-Sans;
+    line-height: 3.34vh;
+    font-weight: 500;
+}
+
+.Bold{
+    font-weight: 800;
+}
+
+.space2{
+    margin-bottom: 2.55vh;
+}

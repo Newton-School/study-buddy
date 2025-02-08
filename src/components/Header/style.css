@@ -1,6 +1,6 @@
 .desktop-logo {
     display: block;
-    padding-top: 7px;
+    padding-top: 0.81vh;
   }
   .mobile-logo {
     display: none;
@@ -12,7 +12,6 @@
     }
     .mobile-logo {
       display: block;
-      padding-top: 7px;
+      padding-top: 0.81vh;
     }
   }
-  

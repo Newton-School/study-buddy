@@ -1,6 +1,6 @@
 import React from 'react'
-import { DIVL } from './singledivL.styled'
-import {DIVR} from './singledivR.styled'
+import { DIVL } from './DIVL'
+import {DIVR} from './DIVR'
 import { Styledheader } from './page.styled'
 
 const Header = () => {
