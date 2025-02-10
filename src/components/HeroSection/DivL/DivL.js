@@ -14,18 +14,26 @@ import { NSButton } from "@newtonschool/grauity";
 import { StyledCompareIcon } from "./DivL.styled";
 import { StyledCompareSpan } from "./DivL.styled";
 import Carousel from "./Carousel";
-
+import { StyledBox, StyledBoxWrapper, StyledShadowBox } from "./DivL.styled";
+import StyledButton from "./StartSolvingButton";
 export default function DivL() {
   return (
     <StyledHeroText>
       <StyledMadeP>Made in Collaboration with</StyledMadeP>
       <StyledCollabDiv>
-        <StyledIITlogo></StyledIITlogo>
-        <StyledCollabText>Alumni of IIT Roorkee</StyledCollabText>
-        <StyledCollabText>X</StyledCollabText>
-        <StyledNSTlogo></StyledNSTlogo>
-        <StyledCollabText>NST Coding Club</StyledCollabText>
+        <div>
+          <StyledIITlogo />
+          <StyledCollabText>Alumni of IIT Roorkee</StyledCollabText>
+        </div>
+        <div>
+          <StyledCollabText>X</StyledCollabText>
+        </div>
+        <div>
+          <StyledNSTlogo />
+          <StyledCollabText>NST Coding Club</StyledCollabText>
+        </div>
       </StyledCollabDiv>
+
       <StyledH1>
         Solve 00000+ PYQs on
         <br />
@@ -38,17 +46,29 @@ export default function DivL() {
             name="check-badge-filled"
             size="32"
           />
-          Practice previous year JEE Mains questions
+          Practice previous year{" "}
+          <StyledBoxWrapper>
+            <StyledShadowBox />
+            <StyledBox>JEE Mains</StyledBox>
+          </StyledBoxWrapper>{" "}
+          questions
         </li>
         <li>Solve PYQs subject-wise and year-wise</li>
-        <li>See your All India Rank among JEE aspirants</li>
+        <li>
+          See your{" "}
+          <StyledBoxWrapper>
+            <StyledShadowBox />
+            <StyledBox>All India Rank</StyledBox>
+          </StyledBoxWrapper>{" "}
+          among JEE aspirants
+        </li>
       </StyledFeatureList>
-
-      <NSButton variant="primary">Start Solving PYQs</NSButton>
+      <StyledButton />
       <StyledCompareDiv>
         <StyledCompareIcon></StyledCompareIcon>
         <StyledCompareSpan>
-          Compare yourself with 5000+ other JEE aspirants across India
+          Compare yourself with <span>5000+ </span>other JEE aspirants across
+          India
         </StyledCompareSpan>
       </StyledCompareDiv>
       <Carousel></Carousel>

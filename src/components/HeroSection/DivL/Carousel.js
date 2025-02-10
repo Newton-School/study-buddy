@@ -1,112 +1,110 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+
+const slides = [
+  { id: 1, text: "“ I love using #StudyBuddy for my JEE prep! ”" },
+  { id: 2, text: "“It's so addictive, I solved 50 questions in one day 💪“" },
+  {
+    id: 3,
+    text: "“Ranked #32 out of 16,200 students, thanks to Study Buddy 🏆“",
+  },
+  {
+    id: 4,
+    text: "“I and my friend solve PYQs together for 4-5 hours daily on Study Buddy 🤯“",
+  },
+];
 
 const Carousel = () => {
-  const slides = [
-    {
-      id: 1,
-      color: "#FFFFFF",
-      text: "“ I love using #StudyBuddy for my JEE prep! ”",
-    },
-    {
-      id: 2,
-      color: "#FFFFFF",
-      text: "“It's so addictive, I solved 50 questions in one day 💪“",
-    },
-    {
-      id: 3,
-      color: "#FFFFFF",
-      text: "“Ranked #32 out of 16,200 students, thanks to Study Buddy 🏆“",
-    },
-    {
-      id: 3,
-      color: "#FFFFFF",
-      text: "“I and my friend solve PYQs together for 4-5 hours daily on Study Buddy 🤯“",
-    },
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
     }, 2000);
-
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, []);
 
   return (
-    <div style={styles.carouselContainer}>
-      <div
-        style={{
-          ...styles.slidesWrapper,
-          transform: `translateX(-${currentIndex * 100}%)`,
-        }}
+    <CarouselContainer>
+      <SlidesWrapper
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {slides.map((slide) => (
-          <div
-            key={slide.id}
-            style={{ ...styles.slide, backgroundColor: slide.color }}
-          >
-            <span style={styles.slideText}>{slide.text}</span>
-          </div>
+          <Slide key={slide.id}>
+            <SlideText>{slide.text}</SlideText>
+          </Slide>
         ))}
-      </div>
-      <div style={styles.dotsContainer}>
+      </SlidesWrapper>
+      <DotsContainer>
         {slides.map((_, index) => (
-          <span
+          <Dot
             key={index}
-            style={{
-              ...styles.dot,
-              backgroundColor: index === currentIndex ? "#717171" : "#bbb",
-            }}
+            active={index === currentIndex}
             onClick={() => setCurrentIndex(index)}
           />
         ))}
-      </div>
-    </div>
+      </DotsContainer>
+    </CarouselContainer>
   );
 };
 
-const styles = {
-  carouselContainer: {
-    width: "424px",
-    overflow: "hidden",
-    position: "relative",
-  },
-  slidesWrapper: {
-    display: "flex",
-    transition: "transform 0.5s ease-in-out",
-  },
-  slide: {
-    minWidth: "424px",
-    height: "40px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontSize: "18px",
-    fontWeight: "bold",
-    color: "white",
-  },
-  slideText: {
-    color: "#5B6271",
-    font: "Mona Sans",
-    fontWeight: "500",
-    fontSize: "14px",
-    textAlign: "center",
-    fontStyle: "italic",
-  },
-  dotsContainer: {
-    textAlign: "center",
-    marginTop: "10px",
-  },
-  dot: {
-    height: "10px",
-    width: "10px",
-    margin: "0 5px",
-    borderRadius: "50%",
-    display: "inline-block",
-    cursor: "pointer",
-  },
-};
+// Styled Components with Media Queries
+const CarouselContainer = styled.div`
+  width: 424px;
+  overflow: hidden;
+  position: relative;
+  margin: -10px 0 0 0;
+
+  @media (max-width: 768px) {
+    width: auto;
+    margin: 0 20px;
+  }
+`;
+
+const SlidesWrapper = styled.div`
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+`;
+
+const Slide = styled.div`
+  min-width: 424px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #fff;
+  border-radius: 10px;
+
+  @media (max-width: 768px) {
+    min-width: 320px;
+  }
+`;
+
+const SlideText = styled.span`
+  color: black;
+  font-family: "Mona Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  font-style: italic;
+`;
+
+const DotsContainer = styled.div`
+  text-align: center;
+  margin-top: 0px;
+`;
+
+const Dot = styled.span`
+  height: 6px;
+  width: 6px;
+  margin: 0 5px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  background-color: ${({ active }) => (active ? "black" : "white")};
+`;
 
 export default Carousel;
