@@ -49,15 +49,17 @@ const Carousel = () => {
 };
 
 // Styled Components with Media Queries
+
 const CarouselContainer = styled.div`
-  width: 424px;
+  width: 100%; /* Makes it fully responsive */
+  max-width: 424px; /* Keeps a max width */
   overflow: hidden;
   position: relative;
-  margin: -10px 0 0 0;
+  margin: -10px 0 0 0; /* Centers it horizontally */
 
   @media (max-width: 768px) {
-    width: auto;
-    margin: 0 20px;
+    max-width: 90%; /* Adjusts width dynamically */
+    margin: 0 auto; /* Ensures centering */
   }
 `;
 
@@ -67,7 +69,8 @@ const SlidesWrapper = styled.div`
 `;
 
 const Slide = styled.div`
-  min-width: 424px;
+  min-width: 100%; /* Takes full width of container */
+  max-width: 424px; /* Restricts it to a max width */
   height: 54px;
   display: flex;
   align-items: center;
@@ -79,7 +82,8 @@ const Slide = styled.div`
   border-radius: 10px;
 
   @media (max-width: 768px) {
-    min-width: 320px;
+    min-width: 100%; /* Allows the slide to be fluid */
+    max-width: 320px; /* Maintains a max size */
   }
 `;
 
@@ -90,11 +94,13 @@ const SlideText = styled.span`
   font-size: 14px;
   text-align: center;
   font-style: italic;
+  word-wrap: break-word; /* Ensures text wraps */
+  overflow-wrap: break-word; /* Extra safety */
 `;
 
 const DotsContainer = styled.div`
   text-align: center;
-  margin-top: 0px;
+  margin-top: 5px; /* Adds slight spacing */
 `;
 
 const Dot = styled.span`
@@ -108,3 +114,63 @@ const Dot = styled.span`
 `;
 
 export default Carousel;
+
+// const CarouselContainer = styled.div`
+//   width: 424px;
+//   overflow: hidden;
+//   position: relative;
+//   margin: -10px 0 0 0;
+
+//   @media (max-width: 768px) {
+//     width: auto;
+//     margin: 0 20px;
+//   }
+// `;
+
+// const SlidesWrapper = styled.div`
+//   display: flex;
+//   transition: transform 0.5s ease-in-out;
+// `;
+
+// const Slide = styled.div`
+//   min-width: 424px;
+//   height: 54px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: 18px;
+//   font-weight: bold;
+//   color: white;
+//   background-color: #fff;
+//   border-radius: 10px;
+
+//   @media (max-width: 768px) {
+//     min-width: 320px;
+//   }
+// `;
+
+// const SlideText = styled.span`
+//   color: black;
+//   font-family: "Mona Sans", sans-serif;
+//   font-weight: 500;
+//   font-size: 14px;
+//   text-align: center;
+//   font-style: italic;
+// `;
+
+// const DotsContainer = styled.div`
+//   text-align: center;
+//   margin-top: 0px;
+// `;
+
+// const Dot = styled.span`
+//   height: 6px;
+//   width: 6px;
+//   margin: 0 5px;
+//   border-radius: 50%;
+//   display: inline-block;
+//   cursor: pointer;
+//   background-color: ${({ active }) => (active ? "black" : "white")};
+// `;
+
+// export default Carousel;

@@ -1,7 +1,4 @@
-import {
-  StyledCompareDiv,
-  StyledHeroText,
-} from "./DivL.styled";
+import { StyledCompareDiv, StyledHeroText } from "./DivL.styled";
 import { StyledCollabDiv } from "./DivL.styled";
 import { StyledMadeP } from "./DivL.styled";
 import { StyledIITlogo } from "./DivL.styled";
@@ -20,7 +17,7 @@ export default function DivL() {
   return (
     <StyledHeroText>
       <StyledMadeP>Made in Collaboration with</StyledMadeP>
-      <StyledCollabDiv>
+      {/* <StyledCollabDiv>
         <div>
           <StyledIITlogo />
           <StyledCollabText>Alumni of IIT Roorkee</StyledCollabText>
@@ -29,6 +26,20 @@ export default function DivL() {
           <StyledCollabText>X</StyledCollabText>
         </div>
         <div>
+          <StyledNSTlogo />
+          <StyledCollabText>NST Coding Club</StyledCollabText>
+        </div>
+      </StyledCollabDiv> */}
+
+      <StyledCollabDiv>
+        <div className="collab-item">
+          <StyledIITlogo />
+          <StyledCollabText>Alumni of IIT Roorkee</StyledCollabText>
+        </div>
+        <div>
+          <StyledCollabText>X</StyledCollabText>
+        </div>
+        <div className="collab-item">
           <StyledNSTlogo />
           <StyledCollabText>NST Coding Club</StyledCollabText>
         </div>

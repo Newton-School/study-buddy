@@ -1,20 +1,37 @@
 import styled from "styled-components";
 
+// export const StyledHeroText = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   width: 506px;
+//   height: 550px;
+//   margin: 24px 0 0 159px;
+//   padding: 24px 0 0 0px;
+//   gap: 28px;
+//   background-color: whitesmoke;
+
+//   @media (max-width: 768px) {
+//     width: 360px;
+//     margin: 0;
+//   }
+// `;
+
 export const StyledHeroText = styled.div`
   display: flex;
   flex-direction: column;
-  width: 506px;
-  height: 550px;
-  margin: 24px 0 0 159px;
-  padding: 24px 0 0 0px;
-  gap: 28px;
+  width: 50vw;
+  height: 100vh;
+  margin: 3vh 0 0 21vw;
+  padding: 3vh 0 0 0;
+  gap: 3.6vh;
   background-color: whitesmoke;
 
   @media (max-width: 768px) {
-    width: 360px;
+    width: 100vw;
     margin: 0;
   }
 `;
+
 export const StyledMadeP = styled.p`
   font-family: "Mona Sans";
   font-style: normal;
@@ -31,40 +48,115 @@ export const StyledMadeP = styled.p`
   }
 `;
 
+// export const StyledMadeP = styled.p`
+//   font-family: "Mona Sans";
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 160%;
+//   letter-spacing: 0.1px;
+//   color: #5b6271;
+//   text-align: center; /* Centers text */
+//   word-wrap: break-word; /* Ensures wrapping */
+//   overflow-wrap: break-word; /* Additional safety for wrapping */
+//   max-width: 100%; /* Prevents overflow */
+
+//   @media (max-width: 768px) {
+//     line-height: 19.2px;
+//     padding: 0 10px; /* Adds slight padding for better readability */
+//   }
+// `;
+
+// export const StyledCollabDiv = styled.div`
+//   width: 445px;
+//   height: 32px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between; /* Ensures even spacing */
+//   margin: -20px 0 0 0;
+
+//   /* Responsive behavior */
+//   @media (max-width: 768px) {
+//     width: 328px;
+//     justify-content: center;
+//     gap: 8px; /*  Adds spacing on smaller screens */
+//     margin: -20px auto;
+//   }
+
+//   & > div:nth-child(1) {
+//     flex-basis: 226px; /* First section */
+//     display: flex;
+//     align-items: center;
+//     gap: 6px;
+//   }
+
+//   & > div:nth-child(2) {
+//     flex-basis: auto; /* 'X' in center */
+//     text-align: center;
+//   }
+
+//   & > div:nth-child(3) {
+//     flex-basis: 178px; /* Third section */
+//     display: flex;
+//     align-items: center;
+//     gap: 6px;
+//     justify-content: flex-end;
+//   }
+// `;
+
+// export const StyledIITlogo = styled.div`
+//   background-color: lightgray;
+//   width: 32px;
+//   height: 32px;
+
+//   @media (max-width: 768px) {
+//     height: 20px;
+//     width: 20px;
+//   }
+// `;
+// export const StyledCollabText = styled.span`
+//   font-family: "Mona Sans", serif;
+//   font-optical-sizing: auto;
+//   font-style: normal;
+//   font-weight: 600;
+//   font-size: 18px;
+//   line-height: 28.8px;
+//   letter-spacing: 0.1px;
+//   color: #16191d;
+
+//   @media (max-width: 768px) {
+//     font-size: 12px;
+//   }
+// `;
+// export const StyledNSTlogo = styled.div`
+//   background-color: lightgray;
+//   width: 20px;
+//   height: 26px;
+
+//   @media (max-width: 768px) {
+//     height: 20px;
+//     width: 20px;
+//   }
+// `;
+
 export const StyledCollabDiv = styled.div`
-  width: 445px;
-  height: 32px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ensures even spacing */
+  justify-content: space-between; /* Keeps sections evenly spaced */
+  width: fit-content;
   margin: -20px 0 0 0;
+  gap: 16px; /* Adjusts spacing between elements */
 
-  /* Responsive behavior */
   @media (max-width: 768px) {
-    width: 328px;
     justify-content: center;
-    gap: 8px; /*  Adds spacing on smaller screens */
-    margin: -20px auto;
+    margin: 0 auto;
+    gap: 10px;
   }
 
-  & > div:nth-child(1) {
-    flex-basis: 226px; /* First section */
+  .collab-item {
     display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  & > div:nth-child(2) {
-    flex-basis: auto; /* 'X' in center */
-    text-align: center;
-  }
-
-  & > div:nth-child(3) {
-    flex-basis: 178px; /* Third section */
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    justify-content: flex-end;
+    align-items: center; /* Ensures logo and text stay on the same line */
+    gap: 8px; /* Space between logo and text */
   }
 `;
 
@@ -72,15 +164,16 @@ export const StyledIITlogo = styled.div`
   background-color: lightgray;
   width: 32px;
   height: 32px;
-
-  @media (max-width: 768px) {
-    height: 20px;
-    width: 20px;
-  }
 `;
+
+export const StyledNSTlogo = styled.div`
+  background-color: lightgray;
+  width: 20px;
+  height: 26px;
+`;
+
 export const StyledCollabText = styled.span`
   font-family: "Mona Sans", serif;
-  font-optical-sizing: auto;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -90,16 +183,6 @@ export const StyledCollabText = styled.span`
 
   @media (max-width: 768px) {
     font-size: 12px;
-  }
-`;
-export const StyledNSTlogo = styled.div`
-  background-color: lightgray;
-  width: 20px;
-  height: 26px;
-
-  @media (max-width: 768px) {
-    height: 20px;
-    width: 20px;
   }
 `;
 
@@ -119,9 +202,6 @@ export const StyledH1 = styled.h1`
   @media (max-width: 768px) {
     font-size: 28px;
     line-height: 33.6px;
-  }
-
-  @media (max-width: 768px) {
     text-align: center;
     font-size: 28px;
   }
