@@ -1,22 +1,9 @@
 "use client";
 
 import { NSButton } from "@newtonschool/grauity";
-import styled from "styled-components";
+import { StyledButtonDiv, StyledButtonText } from "./StartSolvingButton.styled";
 
-export const StyledButtonDiv = styled.div`
-  @media (max-width: 768px) {
-    margin: 0 auto;
-  }
-`;
-
-export const StyledButtonText = styled.span`
-  width: 240px;
-  font-size: 14px;
-  text-align: center;
-  font-weight: 600;
-  letter-spacing: 0.4px;
-`;
-export const StyledButton = () => {
+export const StyledStartSolvingButton = () => {
   return (
     <StyledButtonDiv>
       <NSButton
@@ -43,4 +30,4 @@ export const StyledButton = () => {
   );
 };
 
-export default StyledButton;
+export default StyledStartSolvingButton;

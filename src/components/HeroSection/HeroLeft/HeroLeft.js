@@ -1,35 +1,29 @@
-import { StyledCompareDiv, StyledHeroText } from "./DivL.styled";
-import { StyledCollabDiv } from "./DivL.styled";
-import { StyledMadeP } from "./DivL.styled";
-import { StyledIITlogo } from "./DivL.styled";
-import { StyledCollabText } from "./DivL.styled";
-import { StyledNSTlogo } from "./DivL.styled";
-import { StyledH1 } from "./DivL.styled";
-import { StyledFeatureList } from "./DivL.styled";
+import {
+  StyledHeroLeft,
+  StyledCollaborationPara,
+  StyledIITlogo,
+  StyledNSTlogo,
+  StyledCollabDiv,
+  StyledCollabText,
+  StyledH1,
+  StyledFeatureList,
+  StyledCompareDiv,
+  StyledCompareIcon,
+  StyledCompareSpan,
+  StyledBox,
+  StyledBoxWrapper,
+  StyledShadowBox,
+} from "./HeroLeft.styled";
 import { NSIcon } from "@newtonschool/grauity";
-import { NSButton } from "@newtonschool/grauity";
-import { StyledCompareIcon } from "./DivL.styled";
-import { StyledCompareSpan } from "./DivL.styled";
-import Carousel from "./Carousel";
-import { StyledBox, StyledBoxWrapper, StyledShadowBox } from "./DivL.styled";
-import StyledButton from "./StartSolvingButton";
-export default function DivL() {
+import Carousel from "./Carousel/Carousel";
+import StyledStartSolvingButton from "./StartSolvingButton/StartSolvingButton";
+
+export default function HeroLeft() {
   return (
-    <StyledHeroText>
-      <StyledMadeP>Made in Collaboration with</StyledMadeP>
-      {/* <StyledCollabDiv>
-        <div>
-          <StyledIITlogo />
-          <StyledCollabText>Alumni of IIT Roorkee</StyledCollabText>
-        </div>
-        <div>
-          <StyledCollabText>X</StyledCollabText>
-        </div>
-        <div>
-          <StyledNSTlogo />
-          <StyledCollabText>NST Coding Club</StyledCollabText>
-        </div>
-      </StyledCollabDiv> */}
+    <StyledHeroLeft>
+      <StyledCollaborationPara>
+        Made in Collaboration with
+      </StyledCollaborationPara>
 
       <StyledCollabDiv>
         <div className="collab-item">
@@ -50,6 +44,7 @@ export default function DivL() {
         <br />
         <span>JEE Study Buddy</span>
       </StyledH1>
+
       <StyledFeatureList>
         <li>
           <NSIcon
@@ -74,7 +69,9 @@ export default function DivL() {
           among JEE aspirants
         </li>
       </StyledFeatureList>
-      <StyledButton />
+
+      <StyledStartSolvingButton />
+
       <StyledCompareDiv>
         <StyledCompareIcon></StyledCompareIcon>
         <StyledCompareSpan>
@@ -82,7 +79,8 @@ export default function DivL() {
           India
         </StyledCompareSpan>
       </StyledCompareDiv>
+
       <Carousel></Carousel>
-    </StyledHeroText>
+    </StyledHeroLeft>
   );
 }

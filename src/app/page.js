@@ -1,14 +1,14 @@
-'use client'
-import React from 'react'
-import Header from '@/components/Header/Header'
-import HeroSection from '@/components/HeroSection/HeroSection'
+"use client";
+
+import React from "react";
+import HeroSection from "@/components/HeroSection/HeroSection";
+
 const page = () => {
   return (
     <>
+      <HeroSection />
+    </>
+  );
+};
 
-    <Header/>
-    <HeroSection/>
-    </>  )
-}
-
-export default page
+export default page;

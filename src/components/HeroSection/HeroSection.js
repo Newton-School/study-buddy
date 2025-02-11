@@ -1,12 +1,13 @@
 import React from "react";
-import { StyledHeroSection } from "./page.styled";
-import DivL from "./DivL/DivL";
-import DivR from "./DivR/DivR";
+import { StyledHeroSection } from "./HeroSection.styled";
+import HeroLeft from "./HeroLeft/HeroLeft";
+import { StyledHeroRight } from "./HeroRight/HeroRight.styled";
+
 function HeroSection() {
   return (
     <StyledHeroSection>
-      <DivL></DivL>
-      {/* <DivR></DivR> */}
+      <HeroLeft></HeroLeft>
+      <StyledHeroRight></StyledHeroRight>
     </StyledHeroSection>
   );
 }
