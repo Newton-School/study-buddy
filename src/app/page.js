@@ -1,13 +1,14 @@
-'use client'
-import React from 'react'
-// import Header from '@/components/Header/Header'
-import NumberIncrement from '@/components/NoIncrement/NumberIncrement'
-const page = () => {
+"use client";
+
+import React from "react";
+import NumberIncrement from "@/components/NoIncrement/NumberIncrement";
+
+const Page = () => {
   return (
     <>
-    <NumberIncrement />
-    {/* <Header/> */}
-    </>  )
-}
+      <NumberIncrement />
+    </>
+  );
+};
 
-export default page
+export default Page;
