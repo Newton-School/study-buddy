@@ -1,15 +1,14 @@
-import React from 'react'
-import { DIVL } from './DIVL'
-import {DIVR} from './DIVR'
-import { Styledheader } from './page.styled'
+import React from "react";
+import { HeaderLeft } from "./HeaderLeft";
+import { StyledSignUpButton, StyledHeader } from "./Page.styled";
 
 const Header = () => {
   return (
-    <Styledheader>
-        <DIVL></DIVL>
-        <DIVR></DIVR>
-    </Styledheader>
-  )
-}
+    <StyledHeader>
+      <HeaderLeft></HeaderLeft>
+      <StyledSignUpButton></StyledSignUpButton>
+    </StyledHeader>
+  );
+};
 
-export default Header
+export default Header;

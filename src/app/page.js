@@ -1,15 +1,17 @@
-'use client'
-import React from 'react'
-import Header from '@/components/Header/Header'
-import Section from '@/components/Section/Section'
-import { Img1 } from '@/components/Section/Images/Img1'
+"use client";
+import React from "react";
+import Header from "@/components/Header/Header";
+import { FeaturesSection } from "@/components/Section/FeaturesSection";
+import Lowertext from "@/components/Section/Lowertext";
+
 const page = () => {
   return (
     <>
-    
-    <Header/>
-    <Section/>
-    </>  )
-}
+      <Header />
+      <FeaturesSection />
+      <Lowertext></Lowertext>
+    </>
+  );
+};
 
-export default page
+export default page;
