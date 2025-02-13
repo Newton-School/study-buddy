@@ -1,7 +1,7 @@
 "use client";
 
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./globals.scss";
 import { StyledComponentsRegistry } from "@/lib/StyledComponentsRegistry";
 import { GlobalStyles } from "@/lib/GlobalStyles";
 import { GrauityThemeProvider } from "@newtonschool/grauity";
