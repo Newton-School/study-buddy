@@ -22,7 +22,7 @@ jobs:
 
             const messages = [
               "✨ **Woohoo! Another amazing PR merged!** ✨\n\n",
-              "💖 **Fantastic work, @${author}! Your contribution is pure magic!** ✨🎩",
+              "💖 **Fantastic work! Your contribution is pure magic!** ✨🎩",
               "🚀 **The codebase is now even stronger thanks to you!** 💪",
             ];
 
