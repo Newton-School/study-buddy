@@ -1,17 +1,14 @@
 "use client";
-import React from "react";
-import Header from "@/components/Header/Header";
-import { FeaturesSection } from "@/components/Section/FeaturesSection";
-import Lowertext from "@/components/Section/Lowertext";
 
-const Page = () => {
+import React from "react";
+import HeroSection from "@/components/HeroSection/HeroSection";
+
+const page = () => {
   return (
     <>
-      <Header />
-      <FeaturesSection />
-      <Lowertext></Lowertext>
+      <HeroSection />
     </>
   );
 };
 
-export default Page;
+export default page;

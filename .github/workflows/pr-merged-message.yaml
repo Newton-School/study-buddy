@@ -1,0 +1,61 @@
+name: PR Merge Celebration 🎉🌸
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  celebrate-merge:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send a Super Wholesome Celebration Comment ✨🎊
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const repoOwner = context.repo.owner;
+            const repoName = context.repo.repo;
+            const author = context.payload.pull_request.user.login;
+
+            const messages = [
+              "✨ **Woohoo! Another amazing PR merged!** ✨\n\n",
+              "💖 **Fantastic work! Your contribution is pure magic!** ✨🎩",
+              "🚀 **The codebase is now even stronger thanks to you!** 💪",
+            ];
+
+            const asciiArt = `
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠖⠒⠦⣀⠀⠀⠀⠀⠀⠀⠀  
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡞⠁⠀⠀⠀⠙⣦⠀⠀⠀⠀⠀⠀  
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⡞⠀⢀⡀⡀⠀⠀⠘⡄⠀⠀⠀⠀⠀  
+            ⠀⠀⠀⠀⠀⠀⠀⠀⢸⡀⠀⠘⠿⠃⠀⠀⣀⡇⠀⠀⠀⠀⠀  
+            ⠀⠀⠀⠀⠀⠀⢀⣠⣾⡇⠀⠀⢀⡠⠞⢁⡿⣷⡀⠀⠀⠀⠀  
+            ⠀⠀⠀⠀⣠⣴⡿⠟⠋⠻⣄⣀⠈⠃⣀⣸⠃⠘⢿⣦⣄⠀⠀  
+            ⠀⠀⢀⡾⠋⡀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠈⠙⢿⡀⠀  
+            ⠀⠀⡞⠀⠰⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠈⢷⠀  
+            ⠀⢰⡇⠀⠘⠃⠀⠀⠀⠀⠀🚀 MERGED! 🚀⠀⠀⠀⠘⠀⡾⠀  
+            ⠀⠈⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠁⠀  
+            ⠀⠀⠈⢷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡾⠁⠀⠀  
+            ⠀⠀⠀⠀⠙⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡴⠋⠀⠀⠀⠀  
+            ⠀⠀⠀⠀⠀⠀⠙⠳⠦⣄⣀⣀⣀⡤⠴⠚⠋⠀⠀⠀⠀⠀⠀  
+            `;
+
+            const finalMessage = `
+            🎉🎉🎉 **CONGRATULATIONS @${author}!** 🎉🎉🎉  
+
+            ${asciiArt}  
+
+            ${messages.join("\n")}
+
+            🎶 *We hope you had fun contributing!* 🎶  
+            🦄 **Happy coding!** 💻✨  
+            `;
+
+            github.rest.issues.createComment({
+              owner: repoOwner,
+              repo: repoName,
+              issue_number: prNumber,
+              body: finalMessage
+            });
