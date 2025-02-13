@@ -13,6 +13,7 @@ import {
   StyledBox,
   StyledBoxWrapper,
   StyledShadowBox,
+  StyledCollabItem,
 } from "./HeroLeft.styled";
 import { NSIcon } from "@newtonschool/grauity";
 import Carousel from "./Carousel/Carousel";
@@ -26,17 +27,17 @@ export default function HeroLeft() {
       </StyledCollaborationPara>
 
       <StyledCollabDiv>
-        <div className="collab-item">
+        <StyledCollabItem>
           <StyledIITlogo />
           <StyledCollabText>Alumni of IIT Roorkee</StyledCollabText>
-        </div>
+        </StyledCollabItem>
         <div>
           <StyledCollabText>X</StyledCollabText>
         </div>
-        <div className="collab-item">
+        <StyledCollabItem>
           <StyledNSTlogo />
           <StyledCollabText>NST Coding Club</StyledCollabText>
-        </div>
+        </StyledCollabItem>
       </StyledCollabDiv>
 
       <StyledH1>

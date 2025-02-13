@@ -51,12 +51,12 @@ export const StyledCollabDiv = styled.div`
     margin: 0 auto;
     gap: 10px;
   }
+`;
 
-  .collab-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+export const StyledCollabItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
 `;
 
 export const StyledIITlogo = styled.div`
