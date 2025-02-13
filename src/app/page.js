@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import NumberIncrement from "@/components/NoIncrement/NumberIncrement";
+import HeroSection from "@/components/HeroSection/HeroSection";
 
-const Page = () => {
+const page = () => {
   return (
     <>
-      <NumberIncrement />
+      <HeroSection />
     </>
   );
 };
 
-export default Page;
+export default page;
