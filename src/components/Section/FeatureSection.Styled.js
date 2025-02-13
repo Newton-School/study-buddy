@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { NSButton } from "@newtonschool/grauity";
 
 export const StyledSection = styled.section`
   display: grid;
@@ -26,6 +25,7 @@ export const StyledFeatureCard = styled.div`
     width: 36.37vw;
     height: 28vh;
     overflow: hidden;
+    font-family:"Mona Sans";
   }
 `;
 
@@ -36,10 +36,11 @@ export const StyledMobileFeatureCard = styled.div`
     border: 1px solid #e1e5ea;
     border-radius: 12px;
     flex-direction: column;
-    width: 80vw;
-    height: 30vh;
-    padding: 10px;
+    width: 84vw;
+    height: 33vh;
+    padding: 1.125rem;
     justify-content: space-between;
+    font-family:"Mona Sans";
   }
 `;
 
@@ -48,15 +49,15 @@ export const StyledIcon = styled.img`
   height: 5.6vh;
   align-self: left;
   @media (max-width: 768px) {
-    width: 30%;
+    width: 20%;
     height: 70%;
-    margin-bottom: 4.5%;
+    margin-bottom: 6%;
   }
 `;
 
 export const StyledContent = styled.div`
   h3 {
-    font-size: 18px;
+    font-size: 1.3rem;
     font-weight: bold;
     font: Mona Sans;
     line-height: 24px;
@@ -64,16 +65,17 @@ export const StyledContent = styled.div`
     margin-bottom: 2px;
   }
   p {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #5b6271;
     font-weight: 500px;
     line-height: 19.2px;
+    
   }
 `;
 
 export const StyledFeatureImage = styled.div`
   width: 36.37vw;
-  height: 28vh;
+  height: 29vh;
   background-image: ${({ bgImage }) => `url(${bgImage})`};
   background-size: cover;
   background-repeat: no-repeat;
@@ -92,22 +94,27 @@ export const StyledIconContentWrapper = styled.div`
   gap: 0.7vh;
   @media (max-width: 768px) {
     flex-direction: row;
-    gap: 0px;
+    gap: 6px;
     align-items: end;
     height: 70px;
+    
   }
 `;
 
 export const StyledTextOpacity = styled.h6`
   color: #8c95a6;
   margin-bottom: 1.2vh;
+  font-family:"Mona Sans";
 `;
 
 export const StyledHeading = styled.h2`
   line-height: 5.04vh;
   margin-bottom: 2.5vh;
+  font-family:"Mona Sans";
+  font-size:2rem;
   @media (max-width: 768px) {
-    line-height: 3.04vh;
+    line-height: 4.04vh;
+    font-size:1.875rem;
   }
 `;
 
@@ -130,17 +137,13 @@ export const StyledPara = styled.div`
 `;
 export const StyledHeadingText = styled.h4`
   margin-bottom: 2.55vh;
-  font-size: 25px;
+  font-size: 1.5rem;
 `;
 
 export const StyledParaText = styled.p`
   color: #5b6271;
-  font-size: 18px;
+  font-size: 1.125rem;
 `;
-
-export const StyledSolvePyqButton = function () {
-  return <NSButton>Start Solving PYQs</NSButton>;
-};
 
 export const StyledSectionFlexWrapper = styled.div`
   display: flex;
@@ -160,11 +163,20 @@ export const StyledCenteredDiv = styled.div`
 `;
 
 export const StyledHeadingTextUpper = styled.div`
-  padding: 4.64vh 12.5vw 0vh 12.9vw;
+  padding: 4.64vh 12.5vw 0vh 9.4vw;
+  margin-left:3.2vw;
+  @media (max-width: 768px) {
+    margin-left:0.0vw;
+  }
 `;
 
 export const StyledTextlower = styled.div`
-  padding: 4.64vh 12.5vw 9.29vh 12.9vw;
+  padding: 4.64vh 12.5vw 9.29vh 9.4vw;
+  margin-left:3.2vw;
   gap: 5.57vh;
   text-align: left;
+  font-family:"Mona Sans";
+  @media (max-width: 768px) {
+    margin-left:0.0vw;
+  }
 `;

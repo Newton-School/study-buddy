@@ -7,7 +7,6 @@ import {
   StyledContent,
   StyledFeatureImage,
   StyledIconContentWrapper,
-  StyledSolvePyqButton,
   StyledSectionFlexWrapper,
   StyledHeadingTextUpper,
   StyledMobileFeatureCard,
@@ -18,6 +17,7 @@ import {
   StyledSpan,
 } from "./FeatureSection.Styled";
 import { DesktopFeatures, MobileFeatures } from "./Constants";
+import { NSButton } from "@newtonschool/grauity";
 
 export const FeaturesSection = () => {
   return (
@@ -62,7 +62,7 @@ export const FeaturesSection = () => {
           ))}
         </StyledSection>
         <StyledCenteredDiv>
-          <StyledSolvePyqButton></StyledSolvePyqButton>
+          <NSButton size="extra-large">Start Solving PYQs</NSButton>
         </StyledCenteredDiv>
       </StyledSectionFlexWrapper>
     </>

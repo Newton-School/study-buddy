@@ -4,7 +4,7 @@ import Header from "@/components/Header/Header";
 import { FeaturesSection } from "@/components/Section/FeaturesSection";
 import Lowertext from "@/components/Section/Lowertext";
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <Header />
@@ -14,4 +14,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

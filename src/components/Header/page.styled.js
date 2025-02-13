@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { NewtonLogoFull, NewtonLogoIcon } from "./Constants";
-import { NSButton } from "@newtonschool/grauity";
 
 export const StyledHeader = styled.div`
   display: flex;
@@ -45,14 +44,11 @@ export const StyledNewtonLogoMobile = function () {
   );
 };
 
-export const StyledSignUpButton = function () {
-  return <NSButton>Sign Up</NSButton>;
-};
-
 export const StyledLeftDiv = styled.div`
   display: flex;
   color: #0673f9;
   align-items: center;
+  font-family: "Mona Sans";
 `;
 
 export const StyledMiddleLine = styled.div`
