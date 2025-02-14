@@ -10,12 +10,12 @@ import {
   StyledCompareDiv,
   StyledCompareIcon,
   StyledCompareSpan,
-  StyledBox,
-  StyledBoxWrapper,
-  StyledShadowBox,
   StyledCollabItem,
+  StyledListIcon,
+  StyledIconWrapper,
+  StyledHighLightedTextJEE,
+  StyledHighLightedTextAIR,
 } from "./HeroLeft.styled";
-import { NSIcon } from "@newtonschool/grauity";
 import Carousel from "./Carousel/Carousel";
 import StyledStartSolvingButton from "./StartSolvingButton/StartSolvingButton";
 import NumberIncrement from "@/components/NoIncrement/NumberIncrement";
@@ -42,32 +42,31 @@ export default function HeroLeft() {
       </StyledCollabDiv>
 
       <StyledH1>
-        Solve <NumberIncrement/> PYQs on
+        Solve <NumberIncrement />+ PYQs on
         <br />
         <span>JEE Study Buddy</span>
       </StyledH1>
 
       <StyledFeatureList>
         <li>
-          <NSIcon
-            color="var(--text-primary)"
-            name="check-badge-filled"
-            size="32"
-          />
-          Practice previous year{" "}
-          <StyledBoxWrapper>
-            <StyledShadowBox />
-            <StyledBox>JEE Mains</StyledBox>
-          </StyledBoxWrapper>{" "}
+          <StyledIconWrapper>
+            <StyledListIcon />
+          </StyledIconWrapper>
+          Practice previous year
+          <StyledHighLightedTextJEE />
           questions
         </li>
-        <li>Solve PYQs subject-wise and year-wise</li>
         <li>
-          See your{" "}
-          <StyledBoxWrapper>
-            <StyledShadowBox />
-            <StyledBox>All India Rank</StyledBox>
-          </StyledBoxWrapper>{" "}
+          <StyledIconWrapper>
+            <StyledListIcon />
+          </StyledIconWrapper>
+          Solve PYQs subject-wise and year-wise
+        </li>
+        <li>
+          <StyledIconWrapper>
+            <StyledListIcon />
+          </StyledIconWrapper>
+          See your <StyledHighLightedTextAIR />
           among JEE aspirants
         </li>
       </StyledFeatureList>

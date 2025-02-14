@@ -15,3 +15,9 @@ export const NST_Logo =
 
 export const Carousel_Student_Icon =
   "https://d3dyfaf3iutrxo.cloudfront.net/general/upload/aee8f8bbdf6a446c9a0f476278da22b6.png";
+
+export const List_Highlighted_Text_AIR =
+  "https://d3dyfaf3iutrxo.cloudfront.net/general/upload/b333307a4fc44fc6817a7b1daa025519.png";
+
+export const List_Highlighted_Text_JEE =
+  "https://d3dyfaf3iutrxo.cloudfront.net/general/upload/c91267a1150145ff895f970b4f78a924.png";

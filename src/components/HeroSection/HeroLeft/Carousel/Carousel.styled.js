@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const StyledCarouselContainer = styled.div`
-  width: 100%; /* Makes it fully responsive */
-  max-width: 424px; /* Keeps a max width */
+  width: 100%;
+  max-width: 424px;
   overflow: hidden;
   position: relative;
-  margin: -10px 0 0 0; /* Centers it horizontally */
+  margin: -10px 0 0 0;
 
   @media (max-width: 768px) {
-    max-width: 90%; /* Adjusts width dynamically */
-    margin: 0 auto; /* Ensures centering */
+    max-width: 90%;
+    margin: 0 auto;
   }
 `;
 
@@ -19,8 +19,8 @@ export const StyledSlidesWrapper = styled.div`
 `;
 
 export const StyledSlide = styled.div`
-  min-width: 100%; /* Takes full width of container */
-  max-width: 424px; /* Restricts it to a max width */
+  min-width: 100%;
+  max-width: 424px;
   height: 54px;
   display: flex;
   align-items: center;
@@ -32,8 +32,8 @@ export const StyledSlide = styled.div`
   border-radius: 10px;
 
   @media (max-width: 768px) {
-    min-width: 100%; /* Allows the slide to be fluid */
-    max-width: 320px; /* Maintains a max size */
+    min-width: 100%;
+    max-width: 320px;
     background-color: #edeff3;
   }
 `;
@@ -43,15 +43,16 @@ export const StyledSlideText = styled.span`
   font-family: "Mona Sans", sans-serif;
   font-weight: 500;
   font-size: 14px;
+  padding: 1vh;
   text-align: center;
   font-style: italic;
-  word-wrap: break-word; /* Ensures text wraps */
-  overflow-wrap: break-word; /* Extra safety */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 `;
 
 export const StyledDotsContainer = styled.div`
   text-align: center;
-  margin-top: 5px; /* Adds slight spacing */
+  margin-top: 5px;
 `;
 
 export const StyledDot = styled.span`

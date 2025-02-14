@@ -8,7 +8,7 @@ export const StyledButtonDiv = styled.div`
 
 export const StyledButtonText = styled.span`
   width: 240px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   font-weight: 600;
   letter-spacing: 0.4px;
