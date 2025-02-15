@@ -1,13 +1,22 @@
 import React from "react";
 import { HeaderLeft } from "./HeaderLeft";
-import { StyledHeader } from "./Page.styled";
+import {
+  StyledHeader,
+  StyledSmallSignupButton,
+  StyledMediumSignupButton,
+} from "./Page.styled";
 import { NSButton } from "@newtonschool/grauity";
 
 const Header = () => {
   return (
     <StyledHeader>
       <HeaderLeft></HeaderLeft>
-      <NSButton>Sign Up</NSButton>
+      <StyledSmallSignupButton>
+        <NSButton size="small">Sign Up</NSButton>
+      </StyledSmallSignupButton>
+      <StyledMediumSignupButton>
+        <NSButton size="medium">Sign Up</NSButton>
+      </StyledMediumSignupButton>
     </StyledHeader>
   );
 };
