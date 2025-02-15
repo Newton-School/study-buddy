@@ -58,3 +58,17 @@ export const StyledMiddleLine = styled.div`
   margin-left: 10px;
   margin-right: 10px;
 `;
+
+export const StyledMediumSignupButton = styled.div`
+  display: none;
+  @media (min-width: 376px) {
+    display: block;
+  }
+`;
+
+export const StyledSmallSignupButton = styled.div`
+  display: none;
+  @media (max-width: 376px) {
+    display: block;
+  }
+`;
