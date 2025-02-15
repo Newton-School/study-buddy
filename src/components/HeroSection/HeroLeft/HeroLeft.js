@@ -18,7 +18,7 @@ import {
 import { NSIcon } from "@newtonschool/grauity";
 import Carousel from "./Carousel/Carousel";
 import StyledStartSolvingButton from "./StartSolvingButton/StartSolvingButton";
-import NumberIncrement from "@/components/NoIncrement/NumberIncrement";
+import NumberIncrement from "@/components/NumberIncrement/NumberIncrement";
 
 export default function HeroLeft() {
   return (
@@ -42,7 +42,7 @@ export default function HeroLeft() {
       </StyledCollabDiv>
 
       <StyledH1>
-        Solve <NumberIncrement/> PYQs on
+        Solve <NumberIncrement/>+ PYQs on
         <br />
         <span>JEE Study Buddy</span>
       </StyledH1>
