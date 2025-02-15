@@ -7,6 +7,7 @@ import { FeaturesSection } from "@/components/FeaturesSection/FeaturesSection";
 import Lowertext from "@/components/FeaturesSection/Lowertext";
 
 
+
 const Page = () => {
   return (
     <>
