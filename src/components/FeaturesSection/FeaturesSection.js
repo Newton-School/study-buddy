@@ -9,7 +9,6 @@ import {
   StyledIconContentWrapper,
   StyledSectionFlexWrapper,
   StyledHeadingTextUpper,
-  StyledMobileFeatureCard,
   StyledTextOpacity,
   StyledHeading,
   StyledSpannedContent,
@@ -39,34 +38,18 @@ export const FeaturesSection = () => {
           <StyledSection>
             {Features.map((feature, index) => (
               <StyledFeatureCard key={feature.id} $index={index}>
-                <StyledFeatureImage bgImage={feature.BgImage} />
+                <StyledFeatureImage
+                  desktopBgImage={feature.BgImage}
+                  mobileBgImage={feature.MobileBgImage}
+                />
                 <StyledIconContentWrapper>
-                  <StyledIcon
-                    src={feature.icon}
-                    alt={feature.title}
-                  ></StyledIcon>
+                  <StyledIcon src={feature.icon} alt={feature.title} />
                   <StyledContent>
                     <h3>{feature.title}</h3>
                     <p>{feature.desc}</p>
                   </StyledContent>
                 </StyledIconContentWrapper>
               </StyledFeatureCard>
-            ))}
-
-            {Features.map((feature, index) => (
-              <StyledMobileFeatureCard key={feature.id} $index={index}>
-                <StyledFeatureImage bgImage={feature.MobileBgImage} />
-                <StyledIconContentWrapper>
-                  <StyledIcon
-                    src={feature.icon}
-                    alt={feature.title}
-                  ></StyledIcon>
-                  <StyledContent>
-                    <h3>{feature.title}</h3>
-                    <p>{feature.desc}</p>
-                  </StyledContent>
-                </StyledIconContentWrapper>
-              </StyledMobileFeatureCard>
             ))}
           </StyledSection>
           <StyledCenteredDiv>

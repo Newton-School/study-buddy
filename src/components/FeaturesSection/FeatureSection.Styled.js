@@ -10,14 +10,33 @@ export const StyledSection = styled.section`
   }
 `;
 
+export const StyledFeatureImage = styled.div`
+  width: 36.37vw;
+  height: 29vh;
+  background-image: url(${(props) => props.desktopBgImage});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    background-image: url(${(props) => props.mobileBgImage});
+    background-position: center;
+  }
+`;
+
 export const StyledFeatureCard = styled.div`
-  display: none;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  font-family: "Mona Sans";
+  overflow: hidden;
+
   @media (min-width: 768px) {
     justify-self: ${(props) => (props.$index % 2 === 0 ? "end" : "start")};
     background: #ffffff;
-    border-radius: 16px;
     padding: 10px 0px 20px 20px;
-    display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
@@ -25,13 +44,8 @@ export const StyledFeatureCard = styled.div`
     border: 2px solid #f0f0f0;
     width: 36.37vw;
     height: 28vh;
-    overflow: hidden;
-    font-family: "Mona Sans";
   }
-`;
 
-export const StyledMobileFeatureCard = styled.div`
-  display: none;
   @media (max-width: 400px) {
     display: flex;
     border: 1px solid #e1e5ea;
@@ -41,8 +55,8 @@ export const StyledMobileFeatureCard = styled.div`
     height: 40vh;
     padding: 1.125rem;
     justify-content: space-between;
-    font-family: "Mona Sans";
   }
+
   @media (max-width: 768px) and (min-width: 376px) {
     display: flex;
     border: 1px solid #e1e5ea;
@@ -52,7 +66,6 @@ export const StyledMobileFeatureCard = styled.div`
     height: 35vh;
     padding: 1.125rem;
     justify-content: space-between;
-    font-family: "Mona Sans";
   }
 `;
 
@@ -82,21 +95,6 @@ export const StyledContent = styled.div`
     color: #5b6271;
     font-weight: 500px;
     line-height: 19.2px;
-  }
-`;
-
-export const StyledFeatureImage = styled.div`
-  width: 36.37vw;
-  height: 29vh;
-  background-image: ${({ bgImage }) => `url(${bgImage})`};
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right;
-  @media (max-width: 768px) {
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
   }
 `;
 
