@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import { NSIcon } from "@newtonschool/grauity";
 import {
   IIT_Logo,
+  List_Highlighted_Text_AIR,
+  List_Highlighted_Text_JEE,
   NST_Logo,
   Student_Review_Icon,
 } from "../HeroSection.constants";
@@ -10,8 +13,8 @@ export const StyledHeroLeft = styled.div`
   flex-direction: column;
   width: 45%;
   height: 100vh;
-  padding: 3vh 0 0 3vh;
-  gap: 3.4vh;
+  padding: 2vh 0 0 7vh;
+  gap: 3vh;
 
   @media (max-width: 768px) {
     width: 90%;
@@ -27,7 +30,6 @@ export const StyledCollaborationPara = styled.p`
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 160%;
   letter-spacing: 0.1px;
   color: #5b6271;
 
@@ -43,7 +45,7 @@ export const StyledCollabDiv = styled.div`
   align-items: center;
   justify-content: space-between;
   width: fit-content;
-  margin: -20px 0 0 0;
+  margin: -15px 0 -5vh 0;
   gap: 16px;
 
   @media (max-width: 768px) {
@@ -112,56 +114,66 @@ export const StyledH1 = styled.h1`
     }
   }
   @media (max-width: 768px) {
-    font-size: 8vw;
+    font-size: 7vw;
     line-height: 40px;
     text-align: center;
   }
 `;
 
-export const StyledBoxWrapper = styled.div`
-  position: relative;
-  display: inline-block;
+export const StyledHighLightedTextAIR = styled.span`
+  background-image: url(${List_Highlighted_Text_AIR});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 80px;
+  width: 7em;
+  height: 2.5em;
+  margin: 0 6px;
 `;
 
-export const StyledShadowBox = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 7.12px;
-  background-color: #005c3d;
-  transform: rotate(2.45deg);
-  z-index: 0;
-`;
-
-export const StyledBox = styled.div`
-  border-radius: 7.12px;
-  border: 0.89px solid #005c3d;
-  padding: 3.02px 6.04px;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  gap: 7.56px;
-  transform: rotate(-2.45deg);
-  background-color: #009965;
-  color: white;
-  line-height: 140%;
-  position: relative;
-  z-index: 1;
+export const StyledHighLightedTextJEE = styled.span`
+  background-image: url(${List_Highlighted_Text_JEE});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 80px;
+  width: 2em;
+  height: 2.2em;
+  margin: 0px;
 `;
 
 export const StyledFeatureList = styled.ul`
   list-style-type: none;
+  margin-top: -3vh;
   li {
+    display: flex;
+    align-items: center;
     font-family: "Mona Sans";
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 180%;
+    line-height: 150%;
     letter-spacing: 0.5px;
     color: #009965;
     flex: none;
     order: 1;
     flex-grow: 0;
+    margin-bottom: 1.3vh;
+  }
+`;
+
+export const StyledListIcon = () => {
+  return (
+    <NSIcon color="var(--text-primary)" name="check-badge-filled" size="24" />
+  );
+};
+
+export const StyledIconWrapper = styled.span`
+  margin-right: 8px;
+  display: inline-flex;
+
+  @media (max-width: 768px) {
+    gap: 6px;
   }
 `;
 
